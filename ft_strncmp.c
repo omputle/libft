@@ -6,14 +6,16 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:32:23 by omputle           #+#    #+#             */
-/*   Updated: 2019/05/21 10:32:26 by omputle          ###   ########.fr       */
+/*   Updated: 2019/05/24 10:47:38 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strncmp(char *s1, char *s2, int n)
+#include "libft.h"
+
+int		ft_strncmp(char *s1, char *s2, size_t n)
 {
-	int	count;
-	int	ans;
+	size_t	count;
+	int		ans;
 
 	count = 0;
 	ans = 0;

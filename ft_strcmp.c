@@ -6,11 +6,13 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 11:08:11 by omputle           #+#    #+#             */
-/*   Updated: 2019/05/20 11:08:15 by omputle          ###   ########.fr       */
+/*   Updated: 2019/05/24 10:43:09 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
+#include "libft.h"
+
+int		ft_strcmp(const char *s1, const char *s2)
 {
 	int	count;
 	int	ans;

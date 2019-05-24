@@ -6,13 +6,15 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 14:11:14 by omputle           #+#    #+#             */
-/*   Updated: 2019/05/20 14:12:11 by omputle          ###   ########.fr       */
+/*   Updated: 2019/05/24 10:49:26 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_toupper(int c)
+#include "libft.h"
+
+int		ft_toupper(int c)
 {
-	char	letter;
+	int		letter;
 
 	if (c >= 'a' && c <= 'z')
 	{

@@ -6,11 +6,13 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 10:46:49 by omputle           #+#    #+#             */
-/*   Updated: 2019/05/20 10:46:54 by omputle          ###   ########.fr       */
+/*   Updated: 2019/05/24 10:43:54 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_strcpy(char *dst, char *src)
+#include "libft.h"
+
+char	*ft_strcpy(char *dst, const char *src)
 {
 	int	len;
 	int	count;
@@ -27,5 +29,5 @@ char	ft_strcpy(char *dst, char *src)
 		count++;
 	}
 	dst[len] = '\0';
-	return (*dst);
+	return (dst);
 }

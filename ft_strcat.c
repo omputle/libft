@@ -6,11 +6,13 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 16:34:44 by omputle           #+#    #+#             */
-/*   Updated: 2019/05/20 16:34:57 by omputle          ###   ########.fr       */
+/*   Updated: 2019/05/24 10:42:37 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_strcat(char *s1, char *s2)
+#include "libft.h"
+
+char	*ft_strcat(char *restrict s1, char *restrict s2)
 {
 	int		len;
 	int		i;
@@ -28,4 +30,5 @@ void	ft_strcat(char *s1, char *s2)
 		i++;
 	}
 	s1[len] = '\0';
+	return (s1);
 }

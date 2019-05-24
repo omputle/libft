@@ -6,11 +6,11 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:03:00 by omputle           #+#    #+#             */
-/*   Updated: 2019/05/21 09:03:04 by omputle          ###   ########.fr       */
+/*   Updated: 2019/05/24 10:44:47 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *str)
 {

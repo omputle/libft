@@ -6,15 +6,17 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 08:40:42 by omputle           #+#    #+#             */
-/*   Updated: 2019/05/21 08:40:45 by omputle          ###   ########.fr       */
+/*   Updated: 2019/05/24 10:46:56 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, const char *src, int n)
+#include "libft.h"
+
+char	*ft_strncat(char *restrict dest, const char *restrict src, size_t n)
 {
-	int	count;
-	int	len;
-	int	i;
+	size_t	count;
+	size_t	len;
+	size_t	i;
 
 	len = 0;
 	while (dest[len] != '\0')

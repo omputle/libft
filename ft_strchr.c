@@ -1,21 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 15:19:10 by omputle           #+#    #+#             */
-/*   Updated: 2019/05/24 10:40:42 by omputle          ###   ########.fr       */
+/*   Created: 2019/05/23 12:05:41 by omputle           #+#    #+#             */
+/*   Updated: 2019/05/24 10:42:51 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isascii(int c)
+char	*ft_strchr(const char *str, int c)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	else
-		return (0);
+	int	count;
+
+	count = 0;
+	while (str[count] != '\0')
+	{
+		if (str[count] == c)
+		{
+			return ((char *)&str[count]);
+			break ;
+		}
+		count++;
+	}
+	if (c == '\0')
+		return ((char *)&str[count]);
+	return (0);
 }

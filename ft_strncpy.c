@@ -6,13 +6,15 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 16:37:26 by omputle           #+#    #+#             */
-/*   Updated: 2019/05/20 16:55:35 by omputle          ###   ########.fr       */
+/*   Updated: 2019/05/24 10:48:08 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_strncpy(char *dest, char *src, int len)
+#include "libft.h"
+
+char	*ft_strncpy(char *dest, const char *src, size_t len)
 {
-	int	count;
+	size_t	count;
 
 	count = 0;
 	while (src[count] != '\0' && count < len)
@@ -25,4 +27,5 @@ void	ft_strncpy(char *dest, char *src, int len)
 		dest[count] = '\0';
 		count++;
 	}
+	return (dest);
 }

@@ -6,13 +6,15 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 14:00:44 by omputle           #+#    #+#             */
-/*   Updated: 2019/05/20 14:12:30 by omputle          ###   ########.fr       */
+/*   Updated: 2019/05/24 10:49:09 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_tolower(int c)
+#include "libft.h"
+
+int		ft_tolower(int c)
 {
-	char	letter;
+	int	letter;
 
 	if (c >= 65 && c <= 90)
 	{

@@ -1,4 +1,16 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/25 01:30:29 by omputle           #+#    #+#             */
+/*   Updated: 2019/05/25 01:33:47 by omputle          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strstr(const char *haystack, const char *needle)
 {
@@ -20,13 +32,5 @@ char	*ft_strstr(const char *haystack, const char *needle)
 		}
 		i++;
 	}
-	return (0);
-}
-
-int		main(void)
-{
-	char	needle[50] = "hin";
-	char	haystack[50] = "You know nothing Jon Snow";
-	printf("%s", ft_strstr(haystack, needle));
 	return (0);
 }

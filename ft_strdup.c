@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:03:00 by omputle           #+#    #+#             */
-/*   Updated: 2019/05/24 10:44:47 by omputle          ###   ########.fr       */
+/*   Updated: 2019/05/27 13:19:48 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,13 @@ char	*ft_strdup(const char *str)
 	{
 		len++;
 	}
-	dest = malloc(len * sizeof(char));
+	dest = malloc((len + 1) * sizeof(char));
 	count = 0;
 	while (str[count] != '\0')
 	{
 		dest[count] = str[count];
 		count++;
 	}
+	dest[count] = '\0';
 	return (dest);
 }

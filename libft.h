@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 10:17:33 by omputle           #+#    #+#             */
-/*   Updated: 2019/05/25 01:34:33 by omputle          ###   ########.fr       */
+/*   Updated: 2019/05/28 09:06:06 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,10 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n);
 void	ft_putchar(char c);
 void	ft_putstr(const char *c);
 void	ft_putendl(char const *s);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char const *s, int fd);
+void	ft_putendl_fd(char const *s, int fd);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+void	ft_putnbr(int n);
 
 #endif

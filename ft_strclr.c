@@ -6,11 +6,11 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/25 01:26:35 by omputle           #+#    #+#             */
-/*   Updated: 2019/05/25 01:26:37 by omputle          ###   ########.fr       */
+/*   Updated: 2019/05/25 11:28:57 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lift.h"
+#include "libft.h"
 
 void	ft_strclr(char *str)
 {

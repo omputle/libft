@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 10:17:33 by omputle           #+#    #+#             */
-/*   Updated: 2019/05/28 09:06:06 by omputle          ###   ########.fr       */
+/*   Updated: 2019/05/30 12:03:24 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,11 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char	*ft_strstr(const char *haystak, const char *needle);
 void	ft_putnbr(int n);
+void	ft_putnbr_fd(int n, int fd);
+char	*ft_itoa(int n);
+void	*ft_memset(void *str, int c, size_t len);
+void	ft_bzero(void *str, size_t len);
 
 #endif

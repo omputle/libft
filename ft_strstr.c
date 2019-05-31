@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/25 01:30:29 by omputle           #+#    #+#             */
-/*   Updated: 2019/05/25 01:33:47 by omputle          ###   ########.fr       */
+/*   Updated: 2019/05/28 12:49:25 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	int	j;
 
 	i = 0;
+	if (needle[i] == '\0')
+		return ((char *)&haystack[i]);
 	while (haystack[i] != '\0')
 	{
 		j = 0;

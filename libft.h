@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 10:17:33 by omputle           #+#    #+#             */
-/*   Updated: 2019/05/30 12:03:24 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/01 12:28:33 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-int		ft_strlen(const char *s);
+size_t	ft_strlen(const char *s);
 int		ft_atoi(const char *str);
 char	*ft_strcpy(char *dst, const char *src);
 int		ft_strcmp(const char *s1, const char *s2);
@@ -50,5 +50,10 @@ void	ft_putnbr_fd(int n, int fd);
 char	*ft_itoa(int n);
 void	*ft_memset(void *str, int c, size_t len);
 void	ft_bzero(void *str, size_t len);
+void	*ft_memchr(const void *str, int c, size_t len);
+void	*ft_memmove(void *str1, const void *str2, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+void	*ft_memccpy(void *restrict s2, const void *restrict s1, int c, size_t n);
+void	*ft_memcpy(void *str1, const void *str2, size_t n);
 
 #endif

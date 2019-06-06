@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 10:50:32 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/01 11:23:43 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/06 10:45:54 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memmove(void *str1, const void *str2, size_t n)
 	count = 0;
 	src = (unsigned char *)str2;
 	dest = (unsigned char *)str1;
-	len_d = ft_strlen(dest);
+	len_d = ft_strlen((char *)dest);
 	while ((count <= len_d) && (count < n))
 	{
 		dest[count] = src[count];

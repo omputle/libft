@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 11:51:31 by omputle           #+#    #+#             */
-/*   Updated: 2019/05/30 12:04:16 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/06 10:44:56 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	ft_bzero(void *str, size_t n)
 	unsigned char	*s;
 	size_t			count;
 
+	count = 0;
 	s = (unsigned char *)str;
 	while (count < n)
 	{

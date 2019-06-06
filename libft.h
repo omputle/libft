@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 10:17:33 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/05 09:03:08 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/06 10:42:07 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <string.h>
+# include <ctype.h>
 
 size_t	ft_strlen(const char *s);
 int		ft_atoi(const char *str);
@@ -59,5 +61,6 @@ char	*ft_strjoin(char const *s1, char const *s2);
 void	*ft_memalloc(size_t size);
 char	*ft_strnew(size_t size);
 char	*ft_strtrim(char const *s);
+void	ft_memdel(void **ap);
 
 #endif

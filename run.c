@@ -2,7 +2,9 @@
 
 int		main(void)
 {
-	char	x = ft_tolower('G');
-	printf("%c", x);
+	char	q[] = "Queen";
+	char	k[] = "King";
+	char	*x = ft_memmove(q, k, 2);
+	printf("q: |%s| \t k: |%s| \t x: |%s|\n", q, k, x);
 	return (0);
 }

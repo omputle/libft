@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 16:37:26 by omputle           #+#    #+#             */
-/*   Updated: 2019/05/30 10:52:47 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/07 16:43:39 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strncpy(char *dest, const char *src, size_t len)
 		dest[count] = src[count];
 		count++;
 	}
-	while (count <= len)
+	while (count < len)
 	{
 		dest[count] = '\0';
 		count++;

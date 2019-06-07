@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:32:23 by omputle           #+#    #+#             */
-/*   Updated: 2019/05/25 11:29:49 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/07 10:53:13 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 	{
 		if (s1[count] != s2[count])
 		{
-			ans = s1[count] - s2[count];
+			ans = (unsigned char)s1[count] - (unsigned char)s2[count];
 			break ;
 		}
 		count++;

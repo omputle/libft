@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 10:17:33 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/06 10:42:07 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/10 15:29:09 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,6 @@ void	*ft_memalloc(size_t size);
 char	*ft_strnew(size_t size);
 char	*ft_strtrim(char const *s);
 void	ft_memdel(void **ap);
+void	ft_striter(char *s, void (*f)(char *));
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/25 01:26:35 by omputle           #+#    #+#             */
-/*   Updated: 2019/05/25 11:28:57 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/11 15:59:28 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_strclr(char *str)
 {
 	int	count;
 
+	if (!str)
+		return ;
 	count = 0;
 	while (str[count] != '\0')
 	{

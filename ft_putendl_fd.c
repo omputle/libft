@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:51:53 by omputle           #+#    #+#             */
-/*   Updated: 2019/05/27 11:28:07 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/11 16:03:45 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putendl_fd(char const *s, int fd)
 {
 	int	count;
 
+	if (!s)
+		return ;
 	count = 0;
 	while (s[count] != '\0')
 	{

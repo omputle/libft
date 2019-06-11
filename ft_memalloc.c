@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 09:33:51 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/06 10:53:58 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/11 16:28:26 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ void	*ft_memalloc(size_t size)
 
 	if (size < 0)
 		return (0);
-	else
-		str = (char *)malloc(sizeof(char) * size);
+	str = (char *)malloc(sizeof(char) * size);
+	if (!str)
+		return (NULL);
+	ft_bzero(str, size);
 	return (str);
 }

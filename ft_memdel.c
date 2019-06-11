@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 10:00:04 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/06 10:00:07 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/11 16:15:27 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 void	ft_memdel(void **ap)
 {
-	if (*ap)
-	{
-		free(*ap);
-		*ap = NULL;
-	}
+	if (!(*ap) || !ap)
+		return ;
+	free(*ap);
+	*ap = NULL;	
 }

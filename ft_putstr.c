@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/25 01:27:35 by omputle           #+#    #+#             */
-/*   Updated: 2019/05/25 01:34:05 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/11 16:00:52 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putstr(char const *str)
 {
 	int	count;
 
+	if (!str)
+		return ;
 	count = 0;
 	while (str[count] != '\0')
 	{

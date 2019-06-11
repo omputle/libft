@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 10:17:33 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/10 15:29:09 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/11 16:11:03 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,11 @@ char	*ft_strnew(size_t size);
 char	*ft_strtrim(char const *s);
 void	ft_memdel(void **ap);
 void	ft_striter(char *s, void (*f)(char *));
+void	*ft_striteri(char *s, void (*f)(unsigned int, char *));
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
+char	*ft_strmap(char const *s, char (*f)(char));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_strdel(char **as);
+
 
 #endif

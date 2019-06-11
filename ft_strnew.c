@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 15:10:25 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/10 15:39:59 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/11 11:28:02 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strnew(size_t size)
 		return (0);
 	else
 	{
-		str = (char *)malloc(sizeof(char) * size);
+		str = (char *)malloc(sizeof(char) * (size + 1));
 		if (!str)
 			return (0);
 		else

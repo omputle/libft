@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 10:17:33 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/12 14:48:26 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/13 08:51:04 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	ft_bzero(void *str, size_t len);
 void	*ft_memchr(const void *str, int c, size_t len);
 void	*ft_memmove(void *str1, const void *str2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
-void	*ft_memccpy(void *restrict s2, const void *restrict s1, int c, size_t n);
+void	*ft_memccpy(void *restrict d, const void *restrict s, int c, size_t n);
 void	*ft_memcpy(void *str1, const void *str2, size_t n);
 char	*ft_strjoin(char const *s1, char const *s2);
 void	*ft_memalloc(size_t size);
@@ -68,6 +68,5 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_strdel(char **as);
-
 
 #endif

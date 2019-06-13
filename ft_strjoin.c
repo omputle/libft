@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 16:11:52 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/10 15:15:41 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/13 08:50:04 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	j = 0;
-	if (s1 == NULL || s2  == NULL)
+	if (s1 == NULL || s2 == NULL)
 		return (0);
 	len = ft_strlen((char *)s1) + ft_strlen((char *)s2);
 	ans = (char *)malloc(sizeof(char) * len);

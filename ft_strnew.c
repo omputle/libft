@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 15:10:25 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/11 11:28:02 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/14 14:52:44 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,7 @@ char	*ft_strnew(size_t size)
 		if (!str)
 			return (0);
 		else
-		{
-			while (count < size)
-			{
-				str[count] = '\0';
-				count++;
-			}
-		}
+			ft_bzero(str, size + 1);
 	}
 	return (str);
 }

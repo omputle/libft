@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 10:17:33 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/13 08:51:04 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/14 08:19:33 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,6 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_strdel(char **as);
+char	**ft_strsplit(char const *s, char c);
 
 #endif

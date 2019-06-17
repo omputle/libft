@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:57:34 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/13 08:52:58 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/17 12:11:16 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int		ft_atoi(const char *str)
 {
-	int	num;
-	int	sign;
-	int	count;
+	unsigned int		num;
+	int					sign;
+	int					count;
 
 	num = 0;
 	sign = 1;
@@ -36,5 +36,9 @@ int		ft_atoi(const char *str)
 		num = num * 10 + (str[count] - '0');
 		count++;
 	}
+	if (num > 2147483648 && sign == -1)
+	   return (0);
+	else if (num > 2147483647 && sign == 1)
+		return (-1);
 	return (num * sign);
 }

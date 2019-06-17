@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 11:49:30 by omputle           #+#    #+#             */
-/*   Updated: 2019/05/31 15:56:11 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/17 11:46:23 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,19 @@ char	*ft_itoa(int n)
 	int		neg;
 
 	num = 0;
-	neg = 0;
+	if (n < 0)
+		neg = 1;
+	else
+		neg = 0;
 	count = level(n);
-	num = malloc(sizeof(char) * (count + 1));
+	num = (char *)malloc(sizeof(char) * (count + 1 + neg));
+	if (!num)
+		return (0);
 	if (n < 0)
 	{
 		n = -1 * n;
 		count++;
 		num[0] = '-';
-		neg = 1;
 	}
 	num[count] = '\0';
 	count--;

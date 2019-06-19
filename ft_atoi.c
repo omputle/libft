@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:57:34 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/17 12:11:16 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/19 09:25:24 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,28 +16,26 @@ int		ft_atoi(const char *str)
 {
 	unsigned int		num;
 	int					sign;
-	int					count;
+	int					i;
 
 	num = 0;
 	sign = 1;
-	count = 0;
-	while (str[count] && (str[count] == ' ' || str[count] == '\t' ||
-				str[count] == '\f' || str[count] == '\n' ||
-				str[count] == '\v' || str[count] == '\r'))
-		count++;
-	if (str[count] == '+' || str[count] == '-')
+	i = 0;
+	while (str[i] && ((str[i] >= 9 && str[i] <= 13) || str[i] == 32))
+		i++;
+	if (str[i] == '+' || str[i] == '-')
 	{
-		if (str[count] == '-')
+		if (str[i] == '-')
 			sign = -1;
-		count++;
+		i++;
 	}
-	while (str[count] >= '0' && str[count] <= '9')
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		num = num * 10 + (str[count] - '0');
-		count++;
+		num = num * 10 + (str[i] - '0');
+		i++;
 	}
 	if (num > 2147483648 && sign == -1)
-	   return (0);
+		return (0);
 	else if (num > 2147483647 && sign == 1)
 		return (-1);
 	return (num * sign);

@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 16:11:52 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/13 08:50:04 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/19 09:46:52 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,23 +24,19 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (s1 == NULL || s2 == NULL)
 		return (0);
 	len = ft_strlen((char *)s1) + ft_strlen((char *)s2);
-	ans = (char *)malloc(sizeof(char) * len);
-	if (!ans)
+	if (!(ans = (char *)malloc(sizeof(char) * len)))
 		return (0);
-	else
+	while (s1[i] != '\0')
 	{
-		while (s1[i] != '\0')
-		{
-			ans[i] = (char)s1[i];
-			i++;
-		}
-		while (s2[j] != '\0')
-		{
-			ans[i] = (char)s2[j];
-			j++;
-			i++;
-		}
-		ans[i] = '\0';
-		return (ans);
+		ans[i] = (char)s1[i];
+		i++;
 	}
+	while (s2[j] != '\0')
+	{
+		ans[i] = (char)s2[j];
+		j++;
+		i++;
+	}
+	ans[i] = '\0';
+	return (ans);
 }

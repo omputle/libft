@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/13 10:40:06 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/14 12:18:20 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/19 09:39:25 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ char	**ft_strsplit(char const *s, char c)
 
 	i = 0;
 	j = 0;
+	if (!s)
+		return (0);
 	words = word_count((char *)s, c);
 	str = (char **)malloc(sizeof(char *) * words);
 	if (!str)

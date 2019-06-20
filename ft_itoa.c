@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 11:49:30 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/19 09:31:06 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/20 16:10:51 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,17 @@ int		level(int n)
 
 	count = 0;
 	x = 1;
-	while (n / x != 0)
-	{
-		x = x * 10;
+	if (n < 0)
+		n = -1 * n;
+	if (n == 0)
 		count++;
+	else if (n != 0)
+	{
+		while (n / x != 0)
+		{
+			x = x * 10;
+			count++;
+		}
 	}
 	return (count);
 }

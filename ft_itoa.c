@@ -6,13 +6,13 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 11:49:30 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/20 16:10:51 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/21 11:26:00 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		level(int n)
+static int		level(int n)
 {
 	int	x;
 	int	count;

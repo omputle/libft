@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/25 01:25:36 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/11 15:55:30 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/21 10:27:28 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int		ft_strequ(char const *s1, char const *s2)
 		if (s1[count] != s2[count])
 		{
 			ans = 0;
-			break ;
+			return (ans);
 		}
 		count++;
 	}

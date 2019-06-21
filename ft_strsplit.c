@@ -6,13 +6,13 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/13 10:40:06 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/19 09:39:25 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/21 11:19:29 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	word_count(char *str, char c)
+static size_t	word_count(char *str, char c)
 {
 	size_t	count;
 	size_t	ans;
@@ -33,7 +33,7 @@ size_t	word_count(char *str, char c)
 	return (ans);
 }
 
-size_t	letter_count(char *s, char c)
+static size_t	letter_count(char *s, char c)
 {
 	size_t	count;
 

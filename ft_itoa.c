@@ -6,16 +6,16 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 11:49:30 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/21 11:26:00 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/22 03:15:21 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		level(int n)
+static	int	level(int n)
 {
-	int	x;
-	int	count;
+	int		x;
+	int		count;
 
 	count = 0;
 	x = 1;
@@ -34,7 +34,7 @@ static int		level(int n)
 	return (count);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char	*num;
 	int		count;

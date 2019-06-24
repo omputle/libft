@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/13 10:40:06 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/22 09:19:01 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/24 14:54:02 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ char			**ft_strsplit(char const *s, char c)
 		return (0);
 	while (s[i] != '\0')
 	{
-		if (s[1] != '\0' && s[i] != c)
+		if (s[i] != '\0' && s[i] != c)
 		{
 			str[j] = ft_strsub(s, i, letter_count((char*)s + i, c));
 			j++;

@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/13 10:40:06 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/22 06:59:19 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/22 09:19:01 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,11 @@ static	size_t	letter_count(char *s, char c)
 	return (count);
 }
 
-char		**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	char	**str;
 	size_t	words;
 	size_t	i;
-	size_t	letters;
-	size_t	k;
 	size_t	j;
 
 	i = 0;
@@ -61,21 +59,11 @@ char		**ft_strsplit(char const *s, char c)
 		return (0);
 	while (s[i] != '\0')
 	{
-		while ((char)s[i] == c && s[i] != '\0')
-			i++;
-		while (j < words && s[i] != c && s[i] != '\0')
+		if (s[1] != '\0' && s[i] != c)
 		{
-			k = 0;
-			letters = letter_count(((char *)s + i), c);
-			str[j] = (char *)malloc(sizeof(char) * (letters + 1));
-			while (s[i] != c && s[i] != '\0')
-			{
-				str[j][k] = (char)s[i];
-				i++;
-				k++;
-			}
-			str[j][k] = '\0';
+			str[j] = ft_strsub(s, i, letter_count((char*)s + i, c));
 			j++;
+			i = i + letter_count((char*)s + i, c);
 		}
 		while (s[i] == c && s[i] != '\0')
 			i++;

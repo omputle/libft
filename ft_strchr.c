@@ -6,13 +6,13 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 12:05:41 by omputle           #+#    #+#             */
-/*   Updated: 2019/05/28 10:40:34 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/24 16:51:54 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int	count;
 

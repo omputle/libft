@@ -6,13 +6,13 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:03:00 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/07 16:41:58 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/24 16:42:04 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *str)
+char	*ft_strdup(const char *s1)
 {
 	size_t	len;
 	size_t	count;

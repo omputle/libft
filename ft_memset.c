@@ -6,13 +6,13 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 09:59:30 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/13 08:51:48 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/24 17:02:12 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *str, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t			count;
 	unsigned char	*s;

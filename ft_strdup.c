@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:03:00 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/24 16:42:04 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/24 17:26:04 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ char	*ft_strdup(const char *s1)
 	size_t	count;
 	char	*dest;
 
-	len = ft_strlen((char *)str);
+	len = ft_strlen((char *)s1);
 	if (!(dest = ft_memalloc(sizeof(char) * (len + 1))))
 		return (0);
 	count = 0;
-	while (str[count] != '\0')
+	while (s1[count] != '\0')
 	{
-		dest[count] = str[count];
+		dest[count] = s1[count];
 		count++;
 	}
 	dest[count] = '\0';

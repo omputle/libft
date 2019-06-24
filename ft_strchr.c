@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 12:05:41 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/24 16:51:54 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/24 17:28:12 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,15 @@ char	*ft_strchr(const char *s, int c)
 	int	count;
 
 	count = 0;
-	while (str[count] != '\0')
+	while (s[count] != '\0')
 	{
-		if (str[count] == c)
+		if (s[count] == c)
 		{
-			return ((char *)&str[count]);
-			break ;
+			return ((char *)&s[count]);
 		}
 		count++;
 	}
 	if (c == '\0')
-		return ((char *)&str[count]);
+		return ((char *)&s[count]);
 	return (0);
 }

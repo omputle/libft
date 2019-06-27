@@ -6,18 +6,16 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 10:17:33 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/24 17:17:24 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/25 09:56:10 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
-# include <ctype.h>
 
 size_t	ft_strlen(const char *s);
 int		ft_atoi(const char *str);

@@ -6,7 +6,7 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 11:49:30 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/22 03:15:21 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/27 15:30:03 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,9 @@ static	int	level(int n)
 
 char		*ft_itoa(int n)
 {
-	char	*num;
-	int		count;
-	int		neg;
+	char			*num;
+	int				count;
+	int				neg;
 
 	num = 0;
 	neg = 0;

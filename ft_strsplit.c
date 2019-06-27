@@ -6,13 +6,13 @@
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/13 10:40:06 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/24 14:54:02 by omputle          ###   ########.fr       */
+/*   Updated: 2019/06/27 14:51:57 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	size_t	word_count(char *str, char c)
+static	size_t	word_count(const char *str, char c)
 {
 	size_t	count;
 	size_t	ans;
@@ -33,7 +33,7 @@ static	size_t	word_count(char *str, char c)
 	return (ans);
 }
 
-static	size_t	letter_count(char *s, char c)
+static	size_t	letter_count(const char *s, char c)
 {
 	size_t	count;
 
@@ -55,18 +55,19 @@ char			**ft_strsplit(char const *s, char c)
 	if (!s)
 		return (0);
 	words = word_count((char *)s, c);
-	if (!(str = (char **)malloc(sizeof(char *) * words)))
+	if (!(str = (char **)malloc(sizeof(char *) * (words + 1))))
 		return (0);
 	while (s[i] != '\0')
 	{
 		if (s[i] != '\0' && s[i] != c)
 		{
-			str[j] = ft_strsub(s, i, letter_count((char*)s + i, c));
+			str[j] = ft_strsub(s, i, letter_count((char*)&s[i], c));
 			j++;
-			i = i + letter_count((char*)s + i, c);
+			i = i + letter_count((char*)&s[i], c);
 		}
 		while (s[i] == c && s[i] != '\0')
 			i++;
 	}
+	str[j] = NULL;
 	return (str);
 }

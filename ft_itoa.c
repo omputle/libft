@@ -5,59 +5,49 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 11:49:30 by omputle           #+#    #+#             */
-/*   Updated: 2019/06/27 15:30:03 by omputle          ###   ########.fr       */
+/*   Created: 2019/06/27 16:33:08 by omputle           #+#    #+#             */
+/*   Updated: 2019/06/27 17:06:21 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	level(int n)
+static int		level(unsigned int nb)
 {
-	int		x;
-	int		count;
+	unsigned int	count;
 
 	count = 0;
-	x = 1;
-	if (n < 0)
-		n = -1 * n;
-	if (n == 0)
-		count++;
-	else if (n != 0)
+	while (nb >= 10)
 	{
-		while (n / x != 0)
-		{
-			x = x * 10;
-			count++;
-		}
+		nb = nb / 10;
+		count++;
 	}
-	return (count);
+	return (count + 1);
 }
 
-char		*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
-	char			*num;
-	int				count;
-	int				neg;
+	char			*ans;
+	unsigned int	nbr;
+	unsigned int	count;
+	unsigned int	len;
 
-	num = 0;
-	neg = 0;
 	if (n < 0)
-		neg = 1;
-	count = level(n);
-	if (!(num = (char *)malloc(sizeof(char) * (count + 1 + neg))))
+		nbr = (unsigned int)(-1 * n);
+	else
+		nbr = (unsigned int)n;
+	len = (unsigned int)level(nbr);
+	if (!(ans = (char*)malloc(sizeof(char) * (len + 1 + (n < 0 ? 1 : 0)))))
 		return (0);
-	if (n < 0)
+	if (n < 0 && (ans[0] = '-'))
+		len++;
+	count = len - 1;
+	while (nbr >= 10)
 	{
-		n = -1 * n;
-		count++;
-		num[0] = '-';
+		ans[count--] = (char)(nbr % 10 + 48);
+		nbr = nbr / 10;
 	}
-	num[count] = '\0';
-	while (--count >= neg)
-	{
-		num[count] = '0' + (n % 10);
-		n = (n - (n % 10)) / 10;
-	}
-	return (num);
+	ans[count] = (char)(nbr % 10 + 48);
+	ans[len] = '\0';
+	return (ans);
 }

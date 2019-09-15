@@ -1,31 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ab_value.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 12:05:41 by omputle           #+#    #+#             */
-/*   Updated: 2019/07/03 11:14:35 by omputle          ###   ########.fr       */
+/*   Created: 2019/09/04 11:52:43 by omputle           #+#    #+#             */
+/*   Updated: 2019/09/04 11:54:20 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int		ab_value(int num)
 {
-	int	count;
-
-	count = 0;
-	while (s[count] != '\0')
-	{
-		if (s[count] == c)
-		{
-			return ((char *)&s[count]);
-		}
-		count++;
-	}
-	if (c == '\0')
-		return ((char *)&s[count]);
-	return (0);
+	if (num < 0)
+		return (num * -1);
+	else
+		return (num);
 }

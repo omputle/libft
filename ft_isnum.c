@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_isnum.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 12:05:41 by omputle           #+#    #+#             */
-/*   Updated: 2019/07/03 11:14:35 by omputle          ###   ########.fr       */
+/*   Created: 2019/08/29 15:20:40 by omputle           #+#    #+#             */
+/*   Updated: 2019/09/14 08:35:43 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int		ft_isnum(char *str)
 {
 	int	count;
 
 	count = 0;
-	while (s[count] != '\0')
+	if ((str[count] == '+' || str[count] == '-') && ft_strlen(str) > 1)
+		count++;
+	while (str[count] != '\0')
 	{
-		if (s[count] == c)
-		{
-			return ((char *)&s[count]);
-		}
+		if (ft_isdigit(str[count]) == 0)
+			return (0);
 		count++;
 	}
-	if (c == '\0')
-		return ((char *)&s[count]);
-	return (0);
+	return (1);
 }

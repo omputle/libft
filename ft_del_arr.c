@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_del_arr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omputle <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 12:05:41 by omputle           #+#    #+#             */
-/*   Updated: 2019/07/03 11:14:35 by omputle          ###   ########.fr       */
+/*   Created: 2019/09/12 10:15:02 by omputle           #+#    #+#             */
+/*   Updated: 2019/09/14 10:48:47 by omputle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_del_arr(char **arr)
 {
-	int	count;
+	int		count;
 
 	count = 0;
-	while (s[count] != '\0')
+	while (arr[count] != NULL)
 	{
-		if (s[count] == c)
-		{
-			return ((char *)&s[count]);
-		}
+		free(arr[count]);
+		arr[count] = NULL;
 		count++;
 	}
-	if (c == '\0')
-		return ((char *)&s[count]);
-	return (0);
+	free(arr);
+	arr = NULL;
 }

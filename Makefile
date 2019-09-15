@@ -6,7 +6,7 @@
 #    By: omputle <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/24 15:23:43 by omputle           #+#    #+#              #
-#    Updated: 2019/06/24 16:07:22 by omputle          ###   ########.fr        #
+#    Updated: 2019/09/14 06:40:33 by omputle          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,6 +66,10 @@ SRC = ft_atoi.c \
       ft_strjoin.c \
       ft_tolower.c \
       ft_toupper.c \
+	  ft_isnum.c \
+	  ab_value.c \
+	  ft_del_arr.c \
+	  ft_atol.c \
 
 OBJECT = ft_atoi.o \
       ft_itoa.o \
@@ -119,6 +123,10 @@ OBJECT = ft_atoi.o \
       ft_strjoin.o \
       ft_tolower.o \
       ft_toupper.o \
+	  ft_isnum.o \
+	  ab_value.o \
+	  ft_del_arr.o \
+	  ft_atol.o \
 
 FLAGS = -Wall -Wextra -Werror
 

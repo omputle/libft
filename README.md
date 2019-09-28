@@ -1,3 +1,2 @@
 # libft
-Recreating the basic C functions
-Then putting them in a library
+Recreating the basic C functions and then put them in a library
